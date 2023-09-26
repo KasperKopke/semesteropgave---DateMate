@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 600px) {
+  nav ul li img {
+    max-width: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  nav ul li {
+    font-size: 40px;
+    list-style-type: none;
+  }
+  nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 25px;
+    padding: 1% 4%;
+    width: 95%;
+    margin-bottom: 50px;
+    background-color: white;
+  }
+  nav {
+    margin-top: 10px;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .system {
+    position: fixed;
+    width: 100%;
+    bottom: 30px;
+    display: flex;
+    justify-content: center;
+  }
+  .system ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    max-width: 43%;
+    padding: 2%;
+    border-radius: 60px;
+    background-color: white;
+  }
+  .system ul li {
+    list-style-type: none;
+    font-size: 35px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 2%;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .system ul li:nth-child(2) {
+    margin-top: -83px;
+    background-color: white;
+  }
+  .profiles img {
+    width: 100%;
+    max-height: 100%;
+  }
+}
