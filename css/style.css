@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 720px) {
   nav ul li img {
     max-width: 50px;
     border-radius: 50%;
@@ -87,7 +87,7 @@
     overflow: hidden;
   }
   .profiles {
-    height: 92.55vh;
+    height: 100vh;
     overflow-y: hidden;
     position: relative;
     display: flex;
@@ -161,5 +161,15 @@
     border: 1px solid white;
     padding: 1% 3%;
     border-radius: 50px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .profiles {
+    height: 92.55vh;
+    overflow-y: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
