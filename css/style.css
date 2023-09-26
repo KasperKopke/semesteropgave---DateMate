@@ -70,4 +70,7 @@
     margin-top: -83px;
     background-color: white;
   }
+  .profiles img {
+    max-width: 100%;
+  }
 }
