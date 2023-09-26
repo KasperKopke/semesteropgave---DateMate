@@ -68,8 +68,15 @@
     justify-content: center;
     align-items: center;
   }
-  .system ul li:nth-child(2) {
+
+  .user.active {
+    transition: all 0.2s ease-in-out;
     margin-top: -83px;
+  }
+
+  .user {
+    transition: all 0.2s ease-in-out;
+    margin-top: 0px;
     background-color: white;
   }
 
