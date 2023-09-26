@@ -35,6 +35,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 2;
   }
   .system {
     position: fixed;
@@ -81,5 +82,36 @@
   .profiles {
     height: 92vh;
     overflow-y: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .profile-info {
+    color: white;
+    position: absolute;
+    bottom: 160px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  .profile-info .bio {
+    max-width: 80%;
+  }
+  .topInfo {
+    display: flex;
+    gap: 10px;
+  }
+  .topInfo {
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .age {
+    font-weight: 600;
+  }
+  .name {
+    font-weight: 100;
   }
 }
