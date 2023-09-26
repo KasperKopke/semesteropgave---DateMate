@@ -80,7 +80,7 @@
     overflow: hidden;
   }
   .profiles {
-    height: 92vh;
+    height: 92.55vh;
     overflow-y: hidden;
     position: relative;
     display: flex;
@@ -113,5 +113,46 @@
   }
   .name {
     font-weight: 100;
+  }
+  .profile-window {
+    position: absolute;
+    background-color: #ec0a57;
+    width: 100%;
+    height: 80%;
+    bottom: -100%;
+    border-radius: 33px 33px 0px 0px;
+    padding: 5%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    transition: all 0.2s ease-in-out;
+  }
+  .profile-window.active {
+    bottom: 0%;
+    transition: all 0.2s ease-in-out;
+  }
+  .infobox h2 {
+    color: white;
+    margin-bottom: 50px;
+  }
+  .profile-window-content {
+    display: flex;
+    width: 100%;
+    color: white;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .profile-window-content p {
+    margin-bottom: 30px;
+  }
+  .tags ul {
+    list-style-type: none;
+    display: flex;
+    gap: 10px;
+  }
+  .tags ul li {
+    border: 1px solid white;
+    padding: 1% 3%;
+    border-radius: 50px;
   }
 }
