@@ -1,7 +1,7 @@
 export const profileTmpl = (profile) => `
 
       <img
-        src="${profile.img}"
+        src="${profile.image}"
         alt=""
       />
       <div class="profile-info">
