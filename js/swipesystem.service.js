@@ -1,5 +1,5 @@
 import service from "./service.js";
-import { profileTmpl } from "./template.js";
+import { likedViewTmpl, profileTmpl } from "./template.js";
 
 const swipesystem = {};
 
@@ -28,6 +28,7 @@ swipesystem.init = async () => {
         "beforeend",
         profileTmpl(profileArray[currentProfile])
       );
+
       showinfo();
     } else {
       console.log("There are no profiles in your array");
@@ -47,6 +48,7 @@ swipesystem.init = async () => {
           "beforeend",
           profileTmpl(profileArray[currentProfile])
         );
+
         showinfo();
       } else {
         // Håndter tilfælde, når der ikke er flere profiler tilbage
@@ -64,13 +66,13 @@ swipesystem.init = async () => {
     } else {
       nomore.classList.add("active");
     }
+    likedView();
   };
 
   // Funktion til at håndtere at vise profiloplysninger
   const showinfo = () => {
-    const profileWindow = document.querySelector(".profile-window");
     const profileBtn = document.querySelector(".user");
-
+    const profileWindow = document.querySelector(".profile-window");
     profileBtn.addEventListener("click", () => {
       // Toggles "active" klassen på profileWindow
       profileWindow.classList.toggle("active");
@@ -114,6 +116,42 @@ swipesystem.init = async () => {
 
   likeBtn.addEventListener("click", likeProfile);
   dislikeBtn.addEventListener("click", dislikeProfile);
+
+  const likedViewWrapper = document.querySelector(".liked-wrapper");
+  const likedViewProfile = document.querySelector(".liked-profiles");
+  const likesBtn = document.querySelector(".fa-heart");
+
+  likesBtn.addEventListener("click", () => {
+    likedViewProfile.classList.toggle("active");
+  });
+
+  const likedView = (profiles = likedProfiles) => {
+    likedViewWrapper.innerHTML = "";
+    profiles.forEach((element) => {
+      likedViewWrapper.innerHTML += likedViewTmpl(element);
+    });
+  };
+
+  const filterMaleBtn = document.querySelector("#filter-male");
+  const filterFemaleBtn = document.querySelector("#filter-female");
+  const filterAllBtn = document.querySelector("#filter-all");
+
+  const filterProfilesByGender = (gender) => {
+    if (gender === "All") {
+      likedView();
+    } else {
+      const filteredProfiles = likedProfiles.filter(
+        (profile) => profile.gender === gender
+      );
+      likedView(filteredProfiles);
+    }
+  };
+
+  filterMaleBtn.addEventListener("click", () => filterProfilesByGender("male"));
+  filterFemaleBtn.addEventListener("click", () =>
+    filterProfilesByGender("female")
+  );
+  filterAllBtn.addEventListener("click", () => filterProfilesByGender("All"));
 
   showProfile();
 };

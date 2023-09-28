@@ -36,3 +36,13 @@ export const profileTmpl = (profile) => `
       </div>
    
 `;
+
+export const likedViewTmpl = (profile) => `
+
+<div class="profile">
+<img
+  src="${profile.image}"
+  alt=""
+/>
+</div>
+`;

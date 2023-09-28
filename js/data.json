@@ -2,6 +2,7 @@
   {
     "id": 1,
     "name": "Simone",
+    "gender": "female",
     "age": 21,
     "bio": "Jeg er en sød og ung pige som elsker at gå ture sammen med min hund",
     "image": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cG9ydHJhaXR8ZW58MHx8MHx8fDA%3D&w=1000&q=80",
@@ -13,6 +14,7 @@
   {
     "id": 2,
     "name": "Simon",
+    "gender": "male",
     "age": 19,
     "bio": "Jeg er en frisk ung dreng der elske at spille basketball med gutterne",
     "image": "https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?cs=srgb&dl=pexels-creation-hill-1681010.jpg&fm=jpg",
@@ -20,5 +22,29 @@
     "hobby2": "Film",
     "hobby3": "Basketball",
     "hobby4": "Venner"
+  },
+  {
+    "id": 3,
+    "name": "Jacob",
+    "gender": "male",
+    "age": 22,
+    "bio": "Jeg er en frisk dreng som holder alle omkring sig kært og elsker at være sammen med sine venner",
+    "image": "https://media.istockphoto.com/id/1200677760/photo/portrait-of-handsome-smiling-young-man-with-crossed-arms.jpg?s=612x612&w=0&k=20&c=g_ZmKDpK9VEEzWw4vJ6O577ENGLTOcrvYeiLxi8mVuo=",
+    "hobby1": "Venner",
+    "hobby2": "Musik",
+    "hobby3": "Familie",
+    "hobby4": "Fitness"
+  },
+  {
+    "id": 4,
+    "name": "Eva",
+    "gender": "female",
+    "age": 18,
+    "bio": "Jeg hedder eva og jeg ved ikke rigtig havd jeg skal skrive her men jeg kan godt lide biler",
+    "image": "https://images.unsplash.com/photo-1557053910-d9eadeed1c58?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3R1ZGlvJTIwcG9ydHJhaXR8ZW58MHx8MHx8fDA%3D&w=1000&q=80",
+    "hobby1": "Biler",
+    "hobby2": "Musik",
+    "hobby3": "Familie",
+    "hobby4": "Madlavning"
   }
 ]

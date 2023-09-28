@@ -3,12 +3,12 @@
   padding: 0;
   box-sizing: border-box;
 }
-body,
-html {
-  overflow: hidden;
-}
 
 @media screen and (max-width: 720px) {
+  body,
+  html {
+    overflow: hidden;
+  }
   nav ul li img {
     max-width: 50px;
     border-radius: 50%;
@@ -29,7 +29,7 @@ html {
     border-radius: 25px;
     padding: 1% 4%;
     width: 95%;
-    margin-bottom: 50px;
+
     background-color: white;
   }
   nav {
@@ -40,10 +40,9 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 2;
   }
   .system {
-    z-index: 999;
+    z-index: 997;
     position: fixed;
     min-width: 100%;
     bottom: 30px;
@@ -197,5 +196,73 @@ html {
     height: 100%;
     object-fit: cover; /* Tilføj denne linje for at sikre, at billedet dækker hele containeren uden at strække det. */
     overflow: hidden;
+  }
+
+  .liked-profiles {
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    height: 100vh;
+    z-index: 998;
+    bottom: -130%;
+    padding: 18% 13% 5% 13%;
+    overflow-y: scroll;
+    transition: all 0.2s ease-in-out;
+  }
+  .liked-profiles.active {
+    bottom: 0%;
+    transition: all 0.2s ease-in-out;
+  }
+  .liked-profiles::-webkit-scrollbar {
+    width: 0.1px; /* Set the width to a very small value */
+  }
+
+  .liked-profiles::-webkit-scrollbar-thumb {
+    background-color: transparent; /* Set the thumb color to transparent */
+  }
+
+  .filterbtn {
+    background-color: white;
+    padding: 3px 13px;
+    border-radius: 50px;
+    border: 2px solid black;
+    cursor: pointer;
+  }
+  .filterbtn:focus {
+    background-color: #ec0a57;
+    border-color: white;
+    color: white;
+    scale: 1.15;
+  }
+  .filter {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 20px;
+  }
+  .liked-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+
+    flex-wrap: wrap;
+  }
+  .profile img {
+    max-width: 120px;
+    min-height: 179px;
+    min-width: 120px;
+    border-radius: 13px;
+    object-fit: cover;
+  }
+}
+@media screen and (max-width: 400px) {
+  .profile-info {
+    bottom: 200px;
+  }
+  .liked-profiles {
+    padding: 42% 13% 5% 15%;
   }
 }
