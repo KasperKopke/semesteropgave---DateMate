@@ -3,6 +3,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+body,
+html {
+  overflow: hidden;
+}
 
 @media screen and (max-width: 720px) {
   nav ul li img {
@@ -90,7 +94,7 @@
   }
   .profiles {
     height: 100vh;
-    overflow-y: hidden;
+    overflow: hidden; /* Add this line to hide overflow */
     position: relative;
     display: flex;
     justify-content: center;
@@ -188,14 +192,10 @@
   .no-profiles h1 {
     max-width: 60%;
   }
-}
-@media screen and (max-width: 400px) {
-  .profiles {
-    height: 92.55vh;
-    overflow-y: hidden;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .profiles img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Tilføj denne linje for at sikre, at billedet dækker hele containeren uden at strække det. */
+    overflow: hidden;
   }
 }
