@@ -46,5 +46,41 @@
     "hobby2": "Musik",
     "hobby3": "Familie",
     "hobby4": "Madlavning"
+  },
+  {
+    "id": 5,
+    "name": "Anna",
+    "gender": "female",
+    "age": 22,
+    "bio": "Jeg hedder anna og jeg kan godt lide at se film og spise snacks med mine venner ",
+    "image": "https://images.pexels.com/photos/13096925/pexels-photo-13096925.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "hobby1": "Musik",
+    "hobby2": "Film",
+    "hobby3": "Snacks",
+    "hobby4": "Fitness"
+  },
+  {
+    "id": 6,
+    "name": "Marie",
+    "gender": "female",
+    "age": 21,
+    "bio": "Kæmpe familie menneske!! ",
+    "image": "https://images.pexels.com/photos/14997436/pexels-photo-14997436/free-photo-of-portrait-of-a-beautiful-woman.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "hobby1": "Familie",
+    "hobby2": "Film",
+    "hobby3": "Dyr",
+    "hobby4": "Drinks"
+  },
+  {
+    "id": 7,
+    "name": "Pablo",
+    "gender": "male",
+    "age": 21,
+    "bio": "Elsker byen!",
+    "image": "https://images.pexels.com/photos/13104454/pexels-photo-13104454.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "hobby1": "Drinks",
+    "hobby2": "Biler",
+    "hobby3": "Scooter",
+    "hobby4": "DJ"
   }
 ]

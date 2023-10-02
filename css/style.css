@@ -16,7 +16,7 @@
     text-align: center;
     flex-direction: column;
     position: fixed;
-    z-index: 998;
+    z-index: 997;
   }
 
   .no-profiles i {
@@ -30,6 +30,7 @@
 
   body,
   html {
+    font-family: "Quicksand", sans-serif;
     overflow: hidden;
     background-color: #ec0a57;
   }
@@ -133,7 +134,7 @@
     text-align: center;
   }
   .profile-info .bio {
-    max-width: 63%;
+    max-width: 45%;
   }
   .topInfo {
     display: flex;
@@ -417,7 +418,7 @@
     left: 0%;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 415px) {
   .profile-info {
     bottom: 200px;
   }
@@ -425,7 +426,7 @@
     padding: 42% 13% 5% 15%;
   }
   .message-view {
-    padding: 42% 5% 25% 5%;
+    padding: 42% 5% 15% 5%;
   }
   .message-profile {
     width: 320px;
