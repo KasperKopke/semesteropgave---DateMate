@@ -1,5 +1,5 @@
 import service from "./service.js";
-import { likedViewTmpl, profileTmpl } from "./template.js";
+import { likedViewTmpl, messageTmpl, profileTmpl } from "./template.js";
 
 const swipesystem = {};
 
@@ -67,6 +67,7 @@ swipesystem.init = async () => {
       nomore.classList.add("active");
     }
     likedView();
+    messageView();
   };
 
   // Funktion til at håndtere at vise profiloplysninger
@@ -119,11 +120,16 @@ swipesystem.init = async () => {
 
   const likedViewWrapper = document.querySelector(".liked-wrapper");
   const likedViewProfile = document.querySelector(".liked-profiles");
-  const likesBtn = document.querySelector(".fa-heart");
+  const likesBtn = document.querySelectorAll(".heartbtn");
 
-  likesBtn.addEventListener("click", () => {
-    likedViewProfile.classList.toggle("active");
-  });
+  const likeBtnFunction = () => {
+    likesBtn.forEach((element) => {
+      element.addEventListener("click", () => {
+        likedViewProfile.classList.toggle("active");
+        messageViewPage.classList.remove("active");
+      });
+    });
+  };
 
   const likedView = (profiles = likedProfiles) => {
     likedViewWrapper.innerHTML = "";
@@ -153,6 +159,27 @@ swipesystem.init = async () => {
   );
   filterAllBtn.addEventListener("click", () => filterProfilesByGender("All"));
 
+  const messageViewPage = document.querySelector(".message-view");
+  const messageViewWrapper = document.querySelector(".message-wrapper");
+  const messageBtn = document.querySelectorAll(".fa-message");
+
+  const messageBtnFunction = () => {
+    messageBtn.forEach((element) => {
+      element.addEventListener("click", () => {
+        messageViewPage.classList.toggle("active");
+        likedViewProfile.classList.remove("active");
+      });
+    });
+  };
+
+  const messageView = (profiles = likedProfiles) => {
+    messageViewWrapper.innerHTML = "";
+    profiles.forEach((element) => {
+      messageViewWrapper.innerHTML += messageTmpl(element);
+    });
+  };
+  likeBtnFunction();
+  messageBtnFunction();
   showProfile();
 };
 

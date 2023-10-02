@@ -46,3 +46,20 @@ export const likedViewTmpl = (profile) => `
 />
 </div>
 `;
+
+export const messageTmpl = (profile) => `
+
+<div class="message-profile">
+
+<img
+  src="${profile.image}"
+  alt=""
+/>
+
+<div class="message-content">
+  <h3>${profile.name} <span>${profile.age}</span></h3>
+  <p>Hej</p>
+</div>
+
+</div>  
+`;
