@@ -261,7 +261,7 @@
   .message-view {
     position: fixed;
     z-index: 998;
-    width: 35%;
+    width: 30%;
     height: 96vh;
     background-color: white;
     display: flex;
