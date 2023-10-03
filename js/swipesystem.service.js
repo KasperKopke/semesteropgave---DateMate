@@ -66,8 +66,22 @@ swipesystem.init = async () => {
     } else {
       nomore.classList.add("active");
     }
+    likeAni();
     likedView();
     messageView();
+  };
+
+  //like Transform
+  const likeAni = () => {
+    const profileimg = document.querySelector(".profiles");
+
+    profileimg.classList.add("swipe-animation");
+
+    // Wait for the animation to finish
+    setTimeout(() => {
+      profileimg.classList.remove("swipe-animation");
+      // Perform any other actions after the animation
+    }, 800); // Adjust the duration of the animation as needed
   };
 
   // Funktion til at håndtere at vise profiloplysninger
@@ -115,7 +129,17 @@ swipesystem.init = async () => {
     }
   };
 
-  likeBtn.addEventListener("click", likeProfile);
+  likeBtn.addEventListener("click", () => {
+    const profileWindow = document.querySelector(".profile-window");
+    profileWindow.classList.remove("active");
+
+    setTimeout(() => {
+      likeAni();
+    }, 100);
+    setTimeout(() => {
+      likeProfile();
+    }, 800);
+  });
   dislikeBtn.addEventListener("click", dislikeProfile);
 
   const likedViewWrapper = document.querySelector(".liked-wrapper");

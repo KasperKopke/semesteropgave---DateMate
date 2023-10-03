@@ -311,8 +311,40 @@
   .message-wrapper::-webkit-scrollbar-thumb {
     background-color: transparent; /* Set the thumb color to transparent */
   }
+
+  .profiles.swipe-animation {
+    animation-name: swipe;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes swipe {
+    0% {
+      transform: rotate(0);
+    }
+    10% {
+      transform: rotate(20deg);
+    }
+
+    70% {
+      transform: translateX(150%);
+    }
+  }
 }
 @media screen and (max-width: 720px) {
+  @keyframes swipe {
+    0% {
+      transform: rotate(0);
+    }
+    10% {
+      transform: rotate(20deg);
+    }
+
+    70% {
+      transform: translateX(150%);
+    }
+  }
+
   body {
     background-color: white;
   }
